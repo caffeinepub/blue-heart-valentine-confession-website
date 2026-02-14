@@ -1,0 +1,20 @@
+{
+  "frontend/src/App.tsx": "Main application component that sets up TanStack Router with all routes (proposal, transition, gifts hub, quiz, letter, gallery, forever) wrapped in a shared AppLayout.",
+  "frontend/src/components/AppLayout.tsx": "Global layout wrapper that provides the navy background, floating hearts animation layer, and centered content container for all pages.",
+  "frontend/src/components/HeartsBackground.tsx": "Animated background component that renders floating and falling blue heart emojis across the entire viewport with randomized positions and timing.",
+  "frontend/src/components/GlassCard.tsx": "Reusable glassmorphism card component with translucent background, blur effect, and subtle blue border glow that now extends HTMLAttributes to support onClick and other standard div props.",
+  "frontend/src/components/PrimaryButton.tsx": "Styled button component with primary (glowing blue) and secondary (outlined) variants, including hover effects and transitions.",
+  "frontend/src/components/PageTransition.tsx": "Simple wrapper component that applies fade-in animation to page content for smooth route transitions.",
+  "frontend/src/pages/ProposalPage.tsx": "Initial proposal page with interactive Yes button that grows on clicks and No button that moves away on hover/click, without the large heart image.",
+  "frontend/src/pages/TransitionPage.tsx": "Brief celebratory transition screen that auto-navigates to gifts page after 2 seconds, without the large heart image.",
+  "frontend/src/pages/GiftsHubPage.tsx": "Gifts hub page displaying three clickable gift cards (quiz, letter, gallery) with a \"Finally\" button at the bottom that navigates to the forever page.",
+  "frontend/src/pages/LoveQuizPage.tsx": "Interactive quiz page with 5 pre-filled multiple-choice questions, progress tracking, scoring system, and results screen.",
+  "frontend/src/pages/LoveLetterPage.tsx": "Love letter display and editor page with toggle edit mode, textarea for editing, and localStorage persistence.",
+  "frontend/src/pages/PhotoGalleryPage.tsx": "Photo gallery page with 6 editable slots supporting image upload (base64), captions, edit/view modes, reset functionality, and localStorage persistence.",
+  "frontend/src/pages/ForeverPage.tsx": "Final romantic page with large glowing heart animation, Forever & Always heading, closing message, dense bottom hearts layer, and footer with attribution.",
+  "frontend/src/utils/localStorage.ts": "Helper functions for safely reading from and writing to localStorage with error handling and type support.",
+  "frontend/src/utils/imageToBase64.ts": "Utility function to convert uploaded image files to base64 data URLs with file type and size validation.",
+  "frontend/src/index.css": "Global styles including Valentine's blue theme colors (navy, blue-glow), glassmorphism utilities, glow effects, and custom animations (float, fall, pulse-glow).",
+  "frontend/tailwind.config.js": "Tailwind configuration extended with Valentine's theme colors, custom font family (Inter), and design tokens for the blue heart aesthetic.",
+  "frontend/src/lib/utils.ts": "Utility function for merging Tailwind CSS classes using clsx and tailwind-merge."
+}

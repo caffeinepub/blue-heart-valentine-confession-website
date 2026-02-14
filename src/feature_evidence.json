@@ -1,0 +1,59 @@
+{
+  "kind": "feature_evidence_report",
+  "features": [
+    {
+      "featureId": "feature-update-the-proposal-page-to-remove-the-large-huge-central-glowing-blue-heart-image-while-keeping-the-rest-of-the-layout-spacing-theme-and-existing-yes-no-interactions-unchanged",
+      "featureTitle": "Update the Proposal page (\"/\") to remove the large/huge central glowing blue heart image while keeping the rest of the layout, spacing, theme, and existing Yes/No interactions unchanged.",
+      "files": [
+        "frontend/src/pages/ProposalPage.tsx"
+      ],
+      "components": [
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-11"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-update-the-transition-page-yay-to-remove-the-large-huge-glowing-blue-heart-image-while-keeping-the-heading-subtitle-and-the-automatic-navigation-to-gifts-after-2-seconds-unchanged",
+      "featureTitle": "Update the Transition page (\"/yay\") to remove the large/huge glowing blue heart image while keeping the heading/subtitle and the automatic navigation to \"/gifts\" after ~2 seconds unchanged.",
+      "files": [
+        "frontend/src/pages/TransitionPage.tsx"
+      ],
+      "components": [
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-12"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-add-a-clearly-labeled-button-at-the-end-bottom-of-the-gifts-hub-page-gifts-with-user-facing-text-finally-that-navigates-to-the-final-page-route-forever",
+      "featureTitle": "Add a clearly labeled button at the end (bottom) of the Gifts Hub page (\"/gifts\") with user-facing text \"Finally\" that navigates to the final page route \"/forever\".",
+      "files": [
+        "frontend/src/pages/GiftsHubPage.tsx"
+      ],
+      "components": [
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-13"
+      ],
+      "confidence": "high"
+    }
+  ]
+}

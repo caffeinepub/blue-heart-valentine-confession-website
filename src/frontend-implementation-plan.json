@@ -1,0 +1,55 @@
+{
+  "kind": "implementation_plan",
+  "version": "1.0",
+  "title": "Remove heart images on Proposal/Transition pages and add “Finally” button to Gifts Hub",
+  "requirements": [
+    {
+      "id": "REQ-11",
+      "summary": "Remove the large glowing blue heart image from the Proposal page (/) while preserving layout, spacing, theme, and existing Yes/No behaviors.",
+      "acceptanceCriteria": [
+        "On route \"/\", the large heart image currently rendered above the main GlassCard is no longer displayed.",
+        "The page still shows the heading, subtitle, Yes button growth behavior, and evasive No button behavior exactly as before.",
+        "Overall alignment remains centered and visually consistent with the existing global theme."
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/pages/ProposalPage.tsx",
+          "operation": "modify",
+          "description": "Remove rendering of the large heart <img> (currently using /assets/generated/blue-heart-glow.dim_512x512.png) while keeping the surrounding structure/spacing consistent and leaving all existing Yes/No interactions unchanged."
+        }
+      ]
+    },
+    {
+      "id": "REQ-12",
+      "summary": "Remove the large glowing blue heart image from the Transition page (/yay) while preserving text and the ~2s auto-navigation to /gifts.",
+      "acceptanceCriteria": [
+        "On route \"/yay\", the large heart image is no longer displayed.",
+        "The page still shows “Yay! 🥰” and “Taking you to your gifts...” and remains centered.",
+        "The page still automatically navigates to \"/gifts\" after approximately 2 seconds."
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/pages/TransitionPage.tsx",
+          "operation": "modify",
+          "description": "Remove rendering of the large heart <img> (currently using /assets/generated/blue-heart-glow.dim_512x512.png) while keeping the heading/subtitle and the existing 2-second navigation behavior unchanged."
+        }
+      ]
+    },
+    {
+      "id": "REQ-13",
+      "summary": "Add a bottom-of-page “Finally” button on the Gifts Hub (/gifts) that navigates to /forever using existing styling patterns.",
+      "acceptanceCriteria": [
+        "On route \"/gifts\", a button labeled “Finally” is visible after the gift cards (at the bottom of the page content).",
+        "Clicking/tapping the “Finally” button navigates to \"/forever\".",
+        "The new button uses existing app styling patterns (consistent with the current theme and button styles) and is usable on mobile."
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/pages/GiftsHubPage.tsx",
+          "operation": "modify",
+          "description": "Add a bottom-aligned button labeled “Finally” after the gift card grid; use the existing PrimaryButton component for consistent styling and wire its onClick to navigate to \"/forever\". Verify the component's usage instructions before implementing."
+        }
+      ]
+    }
+  ]
+}

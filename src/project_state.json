@@ -1,0 +1,185 @@
+{
+  "schemaVersion": "1.0.0",
+  "projectStateVersion": 5,
+  "summary": "Blue Heart Valentine Confession Website: a romantic, blue-themed multi-page Valentine’s site with glowing dark-navy aesthetic, floating heart animations, interactive Yes/No proposal screen, gifts section (quiz/letter/gallery), and a final closing page; mobile-first with smooth transitions.",
+  "architectural_notes": [
+    "Use multi-page navigation/route structure: Page 1 -> Page 2 (auto) -> Page 3 -> gift subpages -> final page.",
+    "Persist editable Love Letter content in localStorage.",
+    "Persist uploaded gallery images (base64) and captions in localStorage; provide hidden reset to re-enable editing.",
+    "Mobile-first responsive layout optimized for link sharing (WhatsApp/iMessage)."
+  ],
+  "known_issues": [],
+  "isFixRequest": true,
+  "existing_features": [
+    {
+      "id": "feature-implement-a-multi-page-react-app-with-client-side-navigation-for-these-pages-and-paths-page-1-proposal-page-2-transition-yay-page-3-gifts-hub-gifts-gift-1-love-quiz-gifts-quiz-gift-2-love-letter-gifts-letter-gift-3-photo-gallery-gifts-gallery-final-page-forever-always-forever",
+      "title": "Implement a multi-page React app with client-side navigation for these pages and paths: Page 1 Proposal (\"/\"), Page 2 Transition (\"/yay\"), Page 3 Gifts Hub (\"/gifts\"), Gift 1 Love Quiz (\"/gifts/quiz\"), Gift 2 Love Letter (\"/gifts/letter\"), Gift 3 Photo Gallery (\"/gifts/gallery\"), Final Page Forever & Always (\"/forever\").",
+      "reqIds": [
+        "REQ-1"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-create-a-consistent-global-visual-theme-across-all-pages-deep-navy-background-0a1628-glowing-blue-accents-white-text-glassmorphism-cards-blur-subtle-blue-borders-and-smooth-transitions-animations-ensure-mobile-first-responsive-layout-suitable-for-sharing",
+      "title": "Create a consistent global visual theme across all pages: deep navy background (#0a1628), glowing blue accents, white text, glassmorphism cards (blur + subtle blue borders), and smooth transitions/animations. Ensure mobile-first responsive layout suitable for sharing.",
+      "reqIds": [
+        "REQ-2"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-add-a-reusable-animated-background-effect-visible-across-all-pages-floating-blue-heart-emojis-and-a-subtle-falling-hearts-layer-rendered-behind-the-main-content-and-not-interfering-with-clicks-taps",
+      "title": "Add a reusable animated background effect visible across all pages: floating blue heart emojis and a subtle falling-hearts layer, rendered behind the main content and not interfering with clicks/taps.",
+      "reqIds": [
+        "REQ-3"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-build-page-1-proposal-path-dark-navy-background-with-a-central-large-glowing-blue-heart-and-a-glass-card-containing-heading-will-you-be-my-valentine-and-subtitle-i-have-something-special-for-you-include-two-buttons-a-glowing-blue-yes-button-that-increases-in-size-on-each-click-and-a-no-button-that-moves-to-a-random-position-when-clicked-effectively-preventing-a-no-clicking-yes-navigates-to-page-2",
+      "title": "Build Page 1 (Proposal, path \"/\"): dark navy background with a central large glowing blue heart, and a glass card containing heading \"Will you be my Valentine?\" and subtitle \"I have something special for you...\". Include two buttons: a glowing blue \"Yes\" button that increases in size on each click, and a \"No\" button that moves to a random position when clicked (effectively preventing a \"No\"). Clicking \"Yes\" navigates to Page 2.",
+      "reqIds": [
+        "REQ-4"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-build-page-2-transition-path-yay-show-a-brief-celebratory-screen-with-a-large-glowing-blue-heart-heading-yay-and-subtitle-taking-you-to-your-gifts-auto-navigate-to-page-3-after-2-seconds",
+      "title": "Build Page 2 (Transition, path \"/yay\"): show a brief celebratory screen with a large glowing blue heart, heading \"Yay! 🥰\" and subtitle \"Taking you to your gifts...\". Auto-navigate to Page 3 after ~2 seconds.",
+      "reqIds": [
+        "REQ-5"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-build-page-3-gifts-hub-path-gifts-show-heading-your-gifts-and-subtitle-open-each-one-to-unlock-a-surprise-render-three-clickable-gift-cards-love-quiz-how-well-do-you-know-us-love-letter-words-from-my-heart-and-our-gallery-moments-we-treasure-each-card-navigates-to-its-corresponding-gift-page",
+      "title": "Build Page 3 (Gifts Hub, path \"/gifts\"): show heading \"Your Gifts 💙\" and subtitle \"Open each one to unlock a surprise...\". Render three clickable gift cards: \"🧠 Love Quiz — How well do you know us?\", \"💌 Love Letter — Words from my heart\", and \"📸 Our Gallery — Moments we treasure\". Each card navigates to its corresponding gift page.",
+      "reqIds": [
+        "REQ-6"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-implement-gift-1-love-quiz-page-path-gifts-quiz-include-5-pre-filled-cute-quirky-multiple-choice-questions-customizable-later-via-visual-edits-each-with-exactly-4-options-and-1-correct-answer-provide-a-fun-quiz-flow-next-back-or-sequential-compute-score-and-show-an-end-screen-with-a-cute-message-and-the-numeric-score-e-g-3-5",
+      "title": "Implement Gift 1: Love Quiz page (path \"/gifts/quiz\"): include 5 pre-filled cute/quirky multiple-choice questions (customizable later via visual edits), each with exactly 4 options and 1 correct answer. Provide a fun quiz flow (next/back or sequential), compute score, and show an end screen with a cute message and the numeric score (e.g., \"3/5\").",
+      "reqIds": [
+        "REQ-7"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-implement-gift-2-love-letter-page-path-gifts-letter-display-a-love-letter-inside-a-beautiful-glass-card-add-a-creator-edit-mode-toggled-by-a-pencil-edit-button-that-lets-the-creator-modify-the-letter-text-and-save-it-persist-the-saved-letter-text-in-localstorage-so-it-remains-after-refresh-when-not-editing-show-the-formatted-letter-view-only",
+      "title": "Implement Gift 2: Love Letter page (path \"/gifts/letter\"): display a love letter inside a beautiful glass card. Add a creator edit mode toggled by a pencil/edit button that lets the creator modify the letter text and save it. Persist the saved letter text in localStorage so it remains after refresh. When not editing, show the formatted letter view only.",
+      "reqIds": [
+        "REQ-8"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-implement-gift-3-photo-gallery-page-path-gifts-gallery-display-a-grid-of-4-6-photos-with-optional-captions-provide-an-edit-mode-to-upload-replace-images-and-edit-captions-on-save-the-upload-edit-ui-disappears-and-only-the-gallery-remains-store-images-in-localstorage-as-base64-along-with-captions-provide-a-small-unobtrusive-hidden-reset-re-edit-option-behind-a-small-icon-so-the-creator-can-re-enter-edit-mode-include-a-clearly-labeled-button-near-the-bottom-that-navigates-to-the-final-page-forever",
+      "title": "Implement Gift 3: Photo Gallery page (path \"/gifts/gallery\"): display a grid of 4–6 photos with optional captions. Provide an edit mode to upload/replace images and edit captions; on Save, the upload/edit UI disappears and only the gallery remains. Store images in localStorage as base64 along with captions. Provide a small, unobtrusive hidden reset/re-edit option behind a small icon so the creator can re-enter edit mode. Include a clearly labeled button near the bottom that navigates to the final page (\"/forever\").",
+      "reqIds": [
+        "REQ-9"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-build-final-page-forever-always-path-forever-show-a-large-glowing-blue-heart-animation-heading-forever-always-italic-subtitle-i-love-you-more-than-words-could-ever-say-and-a-heartfelt-closing-message-inside-a-glass-card-add-lots-of-floating-blue-heart-emojis-concentrated-near-the-bottom-while-still-keeping-the-global-floating-falling-hearts-effect",
+      "title": "Build Final Page (Forever & Always, path \"/forever\"): show a large glowing blue heart animation, heading \"Forever & Always\", italic subtitle \"I love you more than words could ever say\", and a heartfelt closing message inside a glass card. Add lots of floating blue heart emojis concentrated near the bottom while still keeping the global floating/falling hearts effect.",
+      "reqIds": [
+        "REQ-10"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-update-the-proposal-page-to-remove-the-large-huge-central-glowing-blue-heart-image-while-keeping-the-rest-of-the-layout-spacing-theme-and-existing-yes-no-interactions-unchanged",
+      "title": "Update the Proposal page (\"/\") to remove the large/huge central glowing blue heart image while keeping the rest of the layout, spacing, theme, and existing Yes/No interactions unchanged.",
+      "reqIds": [
+        "REQ-11"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-update-the-transition-page-yay-to-remove-the-large-huge-glowing-blue-heart-image-while-keeping-the-heading-subtitle-and-the-automatic-navigation-to-gifts-after-2-seconds-unchanged",
+      "title": "Update the Transition page (\"/yay\") to remove the large/huge glowing blue heart image while keeping the heading/subtitle and the automatic navigation to \"/gifts\" after ~2 seconds unchanged.",
+      "reqIds": [
+        "REQ-12"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-add-a-clearly-labeled-button-at-the-end-bottom-of-the-gifts-hub-page-gifts-with-user-facing-text-finally-that-navigates-to-the-final-page-route-forever",
+      "title": "Add a clearly labeled button at the end (bottom) of the Gifts Hub page (\"/gifts\") with user-facing text \"Finally\" that navigates to the final page route \"/forever\".",
+      "reqIds": [
+        "REQ-13"
+      ],
+      "version": 1
+    }
+  ],
+  "new_feature_requests": [
+    {
+      "id": "AR-1",
+      "summary": "Build Page 1 proposal screen: dark navy background, glowing blue heart center, glass card with heading/subtitle, interactive Yes button that grows on each click, No button that moves to random position, floating/falling blue hearts, Yes navigates to Page 2.",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-2",
+      "summary": "Build Page 2 brief celebratory transition screen: large glowing blue heart, 'Yay! 🥰' heading + subtitle, auto-navigate to Page 3 after a couple seconds.",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-3",
+      "summary": "Build Page 3 'Your Gifts 💙' hub: heading/subtitle and three clickable gift cards (Love Quiz, Love Letter, Our Gallery) each navigating to its own page.",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-4",
+      "summary": "Implement Gift 1 Love Quiz page: 5 cute MCQs with 4 options each, scoring with end result message; include sample questions editable later.",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-5",
+      "summary": "Implement Gift 2 Love Letter page: display letter in styled card; creator edit mode via pencil button to edit/save; persist letter text via localStorage.",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-6",
+      "summary": "Implement Gift 3 Photo Gallery page: grid of 4–6 photos with optional captions; edit mode to upload photos and save; hide upload UI after save; hidden reset/re-edit option; store images in localStorage as base64; include button to go to final page.",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-7",
+      "summary": "Build Final Page 'Forever & Always': large glowing blue heart animation, heading/subtitle, heartfelt closing in glass card, lots of floating blue hearts at bottom; accessible after exploring gifts (or as final section).",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-8",
+      "summary": "Apply global design/theme: deep navy (#0a1628) background, glowing blue accents, white text, glassmorphism cards with subtle blue borders/blur, floating hearts animation across pages, smooth transitions/animations, mobile-first responsive for sharing.",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-9",
+      "summary": "Update Page 1 (/) and Page 2 (/yay) to remove the large/huge central glowing blue heart element while keeping the rest of the layout and theme consistent.",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-10",
+      "summary": "Add a clearly labeled \"Finally\" button at the end of the Gifts page (\"/gifts\") to navigate to the final \"I love you\" page (\"/forever\").",
+      "reqIds": [],
+      "status": "pending"
+    }
+  ],
+  "gameProjectType": "none",
+  "projectName": "Blue Heart Valentine Confession Website",
+  "clarification_mode": "instant",
+  "clarification_rounds": 0
+}

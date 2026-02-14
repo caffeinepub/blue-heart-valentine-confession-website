@@ -1,0 +1,73 @@
+{
+  "kind": "build_request",
+  "title": "Remove large hearts from Proposal/Transition pages and add “Finally” button on Gifts Hub",
+  "priority": "normal",
+  "requirements": [
+    {
+      "id": "REQ-11",
+      "text": "Update the Proposal page (\"/\") to remove the large/huge central glowing blue heart image while keeping the rest of the layout, spacing, theme, and existing Yes/No interactions unchanged.",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-3"
+        ],
+        "quotes": [
+          "remove the huge blue heart on first and second page"
+        ]
+      },
+      "acceptanceCriteria": [
+        "On route \"/\", the large heart image currently rendered above the main GlassCard is no longer displayed.",
+        "The page still shows the heading, subtitle, Yes button growth behavior, and evasive No button behavior exactly as before.",
+        "Overall alignment remains centered and visually consistent with the existing global theme."
+      ]
+    },
+    {
+      "id": "REQ-12",
+      "text": "Update the Transition page (\"/yay\") to remove the large/huge glowing blue heart image while keeping the heading/subtitle and the automatic navigation to \"/gifts\" after ~2 seconds unchanged.",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-3"
+        ],
+        "quotes": [
+          "remove the huge blue heart on first and second page"
+        ]
+      },
+      "acceptanceCriteria": [
+        "On route \"/yay\", the large heart image is no longer displayed.",
+        "The page still shows “Yay! 🥰” and “Taking you to your gifts...” and remains centered.",
+        "The page still automatically navigates to \"/gifts\" after approximately 2 seconds."
+      ]
+    },
+    {
+      "id": "REQ-13",
+      "text": "Add a clearly labeled button at the end (bottom) of the Gifts Hub page (\"/gifts\") with user-facing text \"Finally\" that navigates to the final page route \"/forever\".",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-3"
+        ],
+        "quotes": [
+          "add a finally button at the end of gift page to move to the final page of i love you"
+        ]
+      },
+      "acceptanceCriteria": [
+        "On route \"/gifts\", a button labeled “Finally” is visible after the gift cards (at the bottom of the page content).",
+        "Clicking/tapping the “Finally” button navigates to \"/forever\".",
+        "The new button uses existing app styling patterns (consistent with the current theme and button styles) and is usable on mobile."
+      ]
+    }
+  ],
+  "constraints": [
+    "Do not edit files under frontend/src/components/ui or any other frontend immutablePaths listed in SYSTEM_CONTEXT.",
+    "Keep the backend unchanged (no new canister methods or persistence changes are required for this request)."
+  ],
+  "nonGoals": [
+    "Do not change the content or design of the final page (\"/forever\") beyond navigation to it.",
+    "Do not remove the global floating/falling hearts background effect provided by the app layout."
+  ],
+  "imageRequirements": {
+    "required": [],
+    "edits": []
+  }
+}
